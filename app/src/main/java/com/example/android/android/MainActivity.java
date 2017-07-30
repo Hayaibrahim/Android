@@ -12,36 +12,102 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    private CheckBox Linearlayout;
-    private CheckBox RelativeLayout;
-    private Button button1;
+
+    RadioGroup justone;
+    CheckBox choice1;
+    CheckBox choice2;
+    CheckBox choice3;
+    CheckBox choice4;
+    CheckBox choice5;
+    CheckBox choice6;
+    CheckBox choice7;
+    CheckBox choice8;
+    Button Selection1;
+    Button Selection2;
+    Button Selection3;
+    Button Selection4;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        justone = (RadioGroup) findViewById(R.id.RadioGroup);
+        // select = (Button)findViewById(R.id.select);
+        choice1 = (CheckBox) findViewById(R.id.checkBox1);
+        choice2 = (CheckBox) findViewById(R.id.checkBox2);
+        choice3 = (CheckBox) findViewById(R.id.checkBox4);
+        choice4 = (CheckBox) findViewById(R.id.checkBox5);
+        choice5 = (CheckBox) findViewById(R.id.checkBox7);
+        choice6 = (CheckBox) findViewById(R.id.checkBox8);
+        choice7 = (CheckBox) findViewById(R.id.checkBox10);
+        choice8 = (CheckBox) findViewById(R.id.checkBox11);
+
+        Selection1 = (Button) findViewById(R.id.button);
+        Selection2 = (Button) findViewById(R.id.button2);
+        Selection3 = (Button) findViewById(R.id.button3);
+        Selection4 = (Button) findViewById(R.id.button4);
 
 
-        final CheckBox checkBox = (CheckBox) findViewById(R.id.checkBox);
-        if (checkBox.isChecked()) {
-            checkBox.setChecked(false);
+        Selection1.setOnClickListener(new View.OnClickListener()
+
+        {
 
 
-        }
+            @Override
+            public void onClick(View view) {
+
+            }
 
 
-        final Button button1 = (Button) findViewById(R.id.button);
-        button1.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                if (Linearlayout.isChecked()) {
-                    Toast.makeText(MainActivity.this, "LinearLayout is correct", Toast.LENGTH_LONG).show();
+        });
+        Selection1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (choice1.isChecked()) {
+                    Toast.makeText(MainActivity.this, "Good Jop", Toast.LENGTH_LONG).show();
+                }
+                if (choice2.isChecked()) {
+                    Toast.makeText(MainActivity.this, "Try again", Toast.LENGTH_LONG).show();
+                }
+            }
+        });
+        Selection2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (choice3.isChecked()) {
+                    Toast.makeText(MainActivity.this, "Nice Work", Toast.LENGTH_LONG).show();
+                }
+                if (choice4.isChecked()) {
+                    Toast.makeText(MainActivity.this, "Try again", Toast.LENGTH_LONG).show();
 
-                    if
-                            (RelativeLayout.isChecked()) {
-                        Toast.makeText(MainActivity.this, "RelativeLayout is correct", Toast.LENGTH_LONG).show();
+                }
+            }
+        });
+        Selection3.setOnClickListener(new View.OnClickListener() {
 
-                    }
+
+            @Override
+            public void onClick(View view) {
+                if (choice5.isChecked()) {
+                    Toast.makeText(MainActivity.this, "Try Again", Toast.LENGTH_LONG).show();
+                }
+                if (choice6.isChecked()) {
+                    Toast.makeText(MainActivity.this, "Great", Toast.LENGTH_LONG).show();
+
+
+                }
+
+            }
+        });
+        Selection4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (choice7.isChecked()) {
+                    Toast.makeText(MainActivity.this, "Good jop", Toast.LENGTH_LONG).show();
+                }
+                if (choice8.isChecked()) {
+                    Toast.makeText(MainActivity.this, "Try Again", Toast.LENGTH_LONG).show();
 
 
                 }
@@ -51,34 +117,3 @@ public class MainActivity extends AppCompatActivity {
 
     }
 }
-
-
-
-       /* CheckBox Linearlayout = (CheckBox) findViewById(R.id.checkBox);
-        CheckBox RelativeLayout = (CheckBox) findViewById(R.id.checkBox2);
-        CheckBox RecyclerView = (CheckBox) findViewById(R.id.checkBox3);
-        Linearlayout.setOnClickListener((View.OnClickListener) this);
-    }
-
-}
-  /*  private void test(View v) {
-        if (Linearlayout.isChecked()) {
-            Toast.makeText(MainActivity.this, "Linearlayout is incorrect", Toast.LENGTH_LONG).show();
-        }
-        if (RelativeLayout.isChecked()) {
-            Toast.makeText(MainActivity.this, "RelativeLayout is correct", Toast.LENGTH_LONG).show();
-        }
-
-        if (RecyclerView.isChecked()) {
-            Toast.makeText(MainActivity.this, "RecyclerViewis incorrect", Toast.LENGTH_LONG).show();
-        }
-    }
-
-    public void printToLogs(View view) {
-        // Find first menu item TextView and print the text to the logs
-
-        // Find second menu item TextView and print the text to the logs
-
-        // Find third menu item TextView and print the text to the logs
-
-    */
