@@ -111,3 +111,4 @@ public class MainActivity extends AppCompatActivity {
                 InputMethodManager.HIDE_NOT_ALWAYS);
     }
 }
+
